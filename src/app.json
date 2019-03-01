@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index",
+    "pages/changeCity/changeCity"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 5000,
+    "downloadFile": 10000
+  }
+}

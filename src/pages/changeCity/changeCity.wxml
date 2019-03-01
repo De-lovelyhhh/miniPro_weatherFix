@@ -1,0 +1,28 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" bindconfirm='newCity' bindinput='inputCity' placeholder="输入城市，回车确认" />
+        </view>
+      </view>
+    </view>
+    
+    <view class="weui-cells__title">热门城市</view>
+    <view class="weui-flex">
+      <view class="weui-flex__item" id="广州" bindtap='chooseCity'><view class="placeholder">广州</view></view>
+      <view class="weui-flex__item" id="北京" bindtap='chooseCity'><view class="placeholder">北京</view></view>
+      <view class="weui-flex__item" id="上海" bindtap='chooseCity'><view class="placeholder">上海</view></view>
+    </view>
+    <view class="weui-flex">
+      <view class="weui-flex__item" id="武汉" bindtap='chooseCity'><view class="placeholder">武汉</view></view>
+      <view class="weui-flex__item" id="南京" bindtap='chooseCity'><view class="placeholder">南京</view></view>
+      <view class="weui-flex__item" id="深圳" bindtap='chooseCity'><view class="placeholder">深圳</view></view>
+    </view>
+    <view class="weui-flex">
+      <view class="weui-flex__item" id="青岛" bindtap='chooseCity'><view class="placeholder">青岛</view></view>
+      <view class="weui-flex__item" id="厦门" bindtap='chooseCity'><view class="placeholder">厦门</view></view>
+      <view class="weui-flex__item" id="桂林" bindtap='chooseCity'><view class="placeholder">桂林</view></view>
+    </view>
+  </view>
+</view>

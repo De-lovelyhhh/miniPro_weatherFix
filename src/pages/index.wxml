@@ -1,0 +1,69 @@
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+    <view class="kind-list">
+
+      <!--当前天气-->
+      <block>
+        <view class="kind-list__item">
+          <view id="main" class="weui-flex kind-list__item-hd ">
+            <view class="weui-flex__item">
+              {{location}}
+              <button class="weui-btn mini-btn change" type="default" size="mini" bindtap='toCity'>切换城市</button>
+            </view>
+
+            <view>{{todayt}}</view>
+          </view>
+          <view class='tempera' bindtap='getLocation'>{{tempera}}℃</view>
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <view class="placeholder">{{wind}}</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="placeholder">湿度{{wet}}</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="placeholder">{{weather}}</view>
+            </view>
+          </view>
+          <!--<view id="next" class="weui-flex kind-list__item-hd ">
+            <view class="weui-flex__item">星期三</view>
+          </view>-->
+        </view>
+      </block>
+
+      <!--未来天气-->
+      <block>
+        <view class="kind-list__item">
+          <view class="kind-list__item-bd kind-list__item-bd_show">
+            <view>
+              <block wx:for="{{future}}">
+                <navigator url="" class="weui-cell weui-cell_access">
+                  <view class="weui-cell__bd">{{item.week}}</view>
+                  <view class='weui-cell__bd middle'>{{item.weather}}</view>
+                  <view class="weui-cell__ft">{{item.temperature}}</view>
+                </navigator>
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+      
+      <!--天气指数-->
+      <block>
+        <view class="kind-list__item">
+          <view class="weui-grids">
+            <block wx:for="{{today}}" wx:key="img">
+              <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="{{item.img}}" />
+                <text class="weui-grid__label">{{item.name}}</text>
+              </navigator>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!--<view class="page__ft">
+        <image src="images/icon_footer.png" style="width: 84px; height: 19px;"></image>
+    </view>-->
+</view>
